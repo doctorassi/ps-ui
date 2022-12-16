@@ -12,7 +12,7 @@ function Notify(data) {
     $notification.addClass(data.type);
     $notification.html(data.text);
     $notification.fadeIn();
-    $('.notif-container').append($notification);
+    $('.notif-container').prepend($notification);
     setTimeout(function() {
         $.when($notification.fadeOut()).done(function() {
             $notification.remove()
